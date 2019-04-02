@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 14:56:37 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/02 15:39:39 by lugibone         ###   ########.fr       */
+/*   Created: 2019/04/02 15:04:54 by lugibone          #+#    #+#             */
+/*   Updated: 2019/04/02 15:11:07 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(char *s, int c)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	char *ret;
+	unsigned int i;
 
-	ret = 0;
-	if (*s == (char)c)
-		ret = s;
-	while (*s++)
+	i = 0;
+	while ((s1[i] || s2[i]) && i < n)
 	{
-		if (*s == (char)c)
-			ret = s;
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
 	}
-	return (ret);
+	return (0);
 }

@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 14:56:37 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/02 15:39:39 by lugibone         ###   ########.fr       */
+/*   Created: 2019/04/02 13:16:25 by lugibone          #+#    #+#             */
+/*   Updated: 2019/04/02 13:16:40 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(char *s, int c)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	char *ret;
+	unsigned int i;
 
-	ret = 0;
-	if (*s == (char)c)
-		ret = s;
-	while (*s++)
+	i = 0;
+	while (src[i] && i < n)
 	{
-		if (*s == (char)c)
-			ret = s;
+		dest[i] = src[i];
+		i++;
 	}
-	return (ret);
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }

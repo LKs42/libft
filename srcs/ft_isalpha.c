@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 14:56:37 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/02 15:39:39 by lugibone         ###   ########.fr       */
+/*   Created: 2019/04/02 13:01:21 by lugibone          #+#    #+#             */
+/*   Updated: 2019/04/02 15:07:42 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(char *s, int c)
+int	ft_isalpha(int c)
 {
-	char *ret;
-
-	ret = 0;
-	if (*s == (char)c)
-		ret = s;
-	while (*s++)
-	{
-		if (*s == (char)c)
-			ret = s;
-	}
-	return (ret);
+	if (c >= 'A' && c <= 'Z')
+		return (1);
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	return (0);
 }

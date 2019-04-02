@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 14:56:37 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/02 15:39:39 by lugibone         ###   ########.fr       */
+/*   Created: 2019/04/02 14:52:42 by lugibone          #+#    #+#             */
+/*   Updated: 2019/04/02 15:32:59 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(char *s, int c)
+char	*ft_strchr(const char *str, int c)
 {
-	char *ret;
-
-	ret = 0;
-	if (*s == (char)c)
-		ret = s;
-	while (*s++)
-	{
-		if (*s == (char)c)
-			ret = s;
-	}
-	return (ret);
+	while (*str != (char)str)
+		if (!*str++)
+			return (0);
+	return ((char *)str);
 }

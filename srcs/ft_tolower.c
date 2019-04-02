@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 14:56:37 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/02 15:39:39 by lugibone         ###   ########.fr       */
+/*   Created: 2019/04/01 17:04:13 by lugibone          #+#    #+#             */
+/*   Updated: 2019/04/02 15:10:26 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(char *s, int c)
+int	ft_tolower(int c)
 {
-	char *ret;
-
-	ret = 0;
-	if (*s == (char)c)
-		ret = s;
-	while (*s++)
-	{
-		if (*s == (char)c)
-			ret = s;
-	}
-	return (ret);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }

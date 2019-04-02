@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 14:56:37 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/02 15:39:39 by lugibone         ###   ########.fr       */
+/*   Created: 2019/04/02 13:03:49 by lugibone          #+#    #+#             */
+/*   Updated: 2019/04/02 15:08:05 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(char *s, int c)
+int	ft_isprint(int c)
 {
-	char *ret;
-
-	ret = 0;
-	if (*s == (char)c)
-		ret = s;
-	while (*s++)
-	{
-		if (*s == (char)c)
-			ret = s;
-	}
-	return (ret);
+	if (c >= 32 && c <= 127)
+		return (1);
+	return (0);
 }

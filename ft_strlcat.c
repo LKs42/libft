@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 13:01:21 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/02 15:07:42 by lugibone         ###   ########.fr       */
+/*   Created: 2019/04/02 14:50:38 by lugibone          #+#    #+#             */
+/*   Updated: 2019/04/02 15:08:57 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	return (0);
+	size_t ldest;
+	size_t lsrc;
+	size_t i;
+
+	ldest = 0;
+	lsrc = 0;
+	i = 0;
+	while (dest[ldest] != '\0')
+		ldest++;
+	while (src[lsrc] != '\0')
+		lsrc++;
+	if (size < ldest)
+		return (size + lsrc);
+	while (src[i] != '\0' && (ldest + i + 1) < size)
+	{
+		dest[ldest + i] = src[i];
+		i++;
+	}
+	dest[ldest + i] = '\0';
+	return (ldest + lsrc);
 }

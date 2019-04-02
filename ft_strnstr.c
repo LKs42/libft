@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 13:01:21 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/02 15:07:42 by lugibone         ###   ########.fr       */
+/*   Created: 2019/04/02 15:01:17 by lugibone          #+#    #+#             */
+/*   Updated: 2019/04/02 15:10:14 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+char	*ft_strnstr(char *str, char *to_find, size_t len)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	if (c >= 'a' && c <= 'z')
-		return (1);
+	int i;
+	int j;
+
+	i = 0;
+	while (str[i] && i < len)
+	{
+		j = 0;
+		while (str[i + j] == to_find[j] && str[i + j])
+		{
+			j++;
+			if (to_find[j] == '\0')
+				return (str + i);
+		}
+		i++;
+	}
 	return (0);
 }

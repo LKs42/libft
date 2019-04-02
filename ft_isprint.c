@@ -6,11 +6,11 @@
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 13:03:49 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/02 13:03:52 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/02 15:08:05 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 127)
 		return (1);

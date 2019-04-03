@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 15:04:54 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/03 17:40:44 by lugibone         ###   ########.fr       */
+/*   Created: 2019/04/03 16:32:29 by lugibone          #+#    #+#             */
+/*   Updated: 2019/04/03 17:06:11 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int	i;
-	unsigned char	*p1;
-	unsigned char	*p2;
+	unsigned char	*sp1;
+	unsigned char	*sp2;
 
-	p1 = (unsigned char*)s1;
-	p2 = (unsigned char*)s2;
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (p1[i] == p2[i] && p1[i] && p2[i] && (i < n - 1))
-		i++;
-	return ((unsigned char)p1[i] - (unsigned char)p2[i]);
+	sp1 = (unsigned char*)s1;
+	sp2 = (unsigned char*)s2;
+	while (n--)
+	{
+		if (*sp1 != *sp2)
+		{
+			return (*sp1 - *sp2);
+		}
+		else
+		{
+			sp1++;
+			sp2++;
+		}
+	}
+	return (0);
 }

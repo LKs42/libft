@@ -6,20 +6,24 @@
 /*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 15:01:17 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/02 17:28:23 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/03 17:25:43 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strnstr(char *str, char *to_find, int len)
+#include "libft.h"
+
+char	*ft_strnstr(char *str, char *to_find, unsigned int len)
 {
-	int i;
-	int j;
+	unsigned int i;
+	unsigned int j;
 
 	i = 0;
+	if (ft_strlen(to_find) == 0)
+		return (str);
 	while (str[i] && i < len)
 	{
 		j = 0;
-		while (str[i + j] == to_find[j] && str[i + j])
+		while (str[i + j] == to_find[j] && str[i + j] && (i + j) < len)
 		{
 			j++;
 			if (to_find[j] == '\0')

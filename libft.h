@@ -6,7 +6,7 @@
 /*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 15:23:19 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/04 15:46:24 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/04 19:27:46 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-void	ft_putstr(char *str);
 int		ft_strlen(char *str);
 int		ft_atoi(char *str);
 int		ft_isdigit(int c);
@@ -60,5 +59,15 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(char *str, char *charset);
 char	*ft_strtrim(char const *c);
+char	**ft_strsplit(char const *s, char c);
+char	*ft_itoa(int nb);
+void	ft_putchar(char c);
+void	ft_putstr(char const *s);
+void	ft_putendl(char const *s);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif

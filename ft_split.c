@@ -6,7 +6,7 @@
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 15:43:54 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/04 15:45:09 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/04 19:22:49 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static int		ft_nbw(char *str, int i, char *cs)
 	return (j);
 }
 
-static char	**ft_loop(char *str, int i, char **tab, char *cs)
+static char		**ft_loop(char *str, int i, char **tab, char *cs)
 {
 	int k;
 	int j;
@@ -90,7 +90,7 @@ static char	**ft_loop(char *str, int i, char **tab, char *cs)
 	return (tab);
 }
 
-char	**ft_split(char *str, char *charset)
+char			**ft_split(char *str, char *charset)
 {
 	char	**tab;
 	int		i;

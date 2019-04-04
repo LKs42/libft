@@ -6,7 +6,7 @@
 /*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 15:23:19 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/03 19:15:30 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/04 13:31:15 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 char	*ft_strcat(char *dest, char *src);
 char	*ft_strchr(const char *str, int c);
-int		ft_strcmp(char *s1, char *s2);
+int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strdup(char *src);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
@@ -53,5 +53,8 @@ void	ft_strclr(char *s);
 void	ft_striter(char *s, void(*f)(char *));
 void	ft_striteri(char *s, void(*f)(unsigned int, char *));
 char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
 
 #endif

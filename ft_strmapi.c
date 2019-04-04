@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 15:04:17 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/04 13:31:03 by lugibone         ###   ########.fr       */
+/*   Created: 2019/04/04 12:54:35 by lugibone          #+#    #+#             */
+/*   Updated: 2019/04/04 13:17:00 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(const char *s1, const char *s2)
-{
-	unsigned char	*p1;
-	unsigned char	*p2;
-	int				i;
+#include "libft.h"
 
-	p1 = (unsigned char*)s1;
-	p2 = (unsigned char*)s2;
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	size_t	i;
+	char	*result;
+
+	if (!s || !f)
+		return (NULL);
+	result = ft_strnew(ft_strlen((char*)s));
 	i = 0;
-	while (p1[i] || p2[i])
+	while (s[i])
 	{
-		if (p1[i] != p2[i])
-			return ((unsigned char)p1[i] - (unsigned char)p2[i]);
+		result[i] = f(i, s[i]);
 		i++;
 	}
-	return (0);
+	return (result);
 }

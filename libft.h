@@ -6,7 +6,7 @@
 /*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 15:23:19 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/05 16:01:12 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/05 17:42:58 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-int					ft_strlen(char *str);
+size_t				ft_strlen(char *str);
 int					ft_atoi(const char *str);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);

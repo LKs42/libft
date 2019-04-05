@@ -6,7 +6,7 @@
 /*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 15:01:17 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/03 17:25:43 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/05 17:35:19 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(char *str, char *to_find, unsigned int len)
 	unsigned int j;
 
 	i = 0;
-	if (ft_strlen(to_find) == 0)
+	if ((int)ft_strlen(to_find) == 0)
 		return (str);
 	while (str[i] && i < len)
 	{

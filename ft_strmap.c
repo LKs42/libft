@@ -6,7 +6,7 @@
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 19:14:12 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/05 16:42:04 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/05 17:34:50 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	if (!s || !f)
 		return (NULL);
-	result = ft_strnew(ft_strlen((char*)s));
+	result = ft_strnew((int)ft_strlen((char*)s));
 	if (result == NULL)
 		return (NULL);
 	i = -1;

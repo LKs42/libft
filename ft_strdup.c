@@ -6,7 +6,7 @@
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 13:14:28 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/05 15:23:04 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/05 17:34:12 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char		*ft_strdup(char *src)
 	int		i;
 
 	i = 0;
-	size = ft_strlen(src);
+	size = (int)ft_strlen(src);
 	result = NULL;
 	if (!(result = malloc(sizeof(char) * size + 1)))
 		return (NULL);

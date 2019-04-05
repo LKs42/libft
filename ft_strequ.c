@@ -6,7 +6,7 @@
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 13:18:20 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/04 13:30:15 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/05 18:10:03 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,11 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	if (ft_strcmp(s1, s2) != 0)
-		return (0);
-	return (1);
+	if (s1 && s2)
+	{
+		if (ft_strcmp(s1, s2) != 0)
+			return (0);
+		return (1);
+	}
+	return (0);
 }

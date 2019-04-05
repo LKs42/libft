@@ -6,7 +6,7 @@
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 18:31:20 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/03 18:39:47 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/05 16:41:09 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strnew(size_t size)
 {
 	char *result;
 
-	if (!(result = (char*)malloc(size)))
+	if (!(result = (char*)malloc(size + 1)))
 		return (NULL);
 	ft_memset(result, (int)'\0', size + 1);
 	return (result);

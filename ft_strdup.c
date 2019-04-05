@@ -6,34 +6,13 @@
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 13:14:28 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/02 13:15:42 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/05 15:23:04 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int		ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strcpy(char *dest, char *src)
-{
-	int i;
-
-	i = -1;
-	while (src[++i])
-		dest[i] = src[i];
-	dest[i] = '\0';
-	return (dest);
-}
-
-char	*ft_strdup(char *src)
+char		*ft_strdup(char *src)
 {
 	char	*result;
 	int		size;

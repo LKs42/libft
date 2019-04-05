@@ -6,15 +6,17 @@
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 13:12:24 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/02 13:12:43 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/05 16:39:59 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+#include "libft.h"
+
+int	ft_atoi(const char *str)
 {
-	int i;
-	int negatif;
-	int nb;
+	long long int i;
+	long long int negatif;
+	long long int nb;
 
 	negatif = 1;
 	i = 0;
@@ -30,7 +32,7 @@ int	ft_atoi(char *str)
 		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		nb = nb * 10 + (str[i] - '0');
+		nb = nb * 10 + ((long long int)str[i] - '0');
 		i++;
 	}
 	return (nb * negatif);

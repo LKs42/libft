@@ -6,7 +6,7 @@
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 14:18:17 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/04 14:50:01 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/05 17:02:48 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (((unsigned int)start + (unsigned int)len) > i)
 		return (NULL);
-	result = ft_strnew(len + 1);
+	result = ft_strnew(len);
+	if (result == NULL)
+		return (NULL);
 	i = 0;
 	while (i < (unsigned int)len && s[start])
 	{

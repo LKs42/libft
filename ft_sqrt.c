@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 13:16:12 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/09 16:26:18 by lugibone         ###   ########.fr       */
+/*   Created: 2019/02/11 11:33:10 by lugibone          #+#    #+#             */
+/*   Updated: 2019/02/11 16:25:06 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, const char *src)
+int	ft_sqrt(int nb)
 {
-	int i;
+	int a;
 
-	i = -1;
-	while (src[++i])
-		dest[i] = src[i];
-	dest[i] = '\0';
-	return (dest);
+	a = -1;
+	while (++a < (nb / 2))
+	{
+		if ((a * a) == nb)
+			return (a);
+	}
+	return (0);
 }

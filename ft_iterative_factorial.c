@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 13:16:12 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/09 16:26:18 by lugibone         ###   ########.fr       */
+/*   Created: 2019/02/10 14:38:11 by lugibone          #+#    #+#             */
+/*   Updated: 2019/02/10 15:04:50 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, const char *src)
+int	ft_iterative_factorial(int nb)
 {
+	int result;
 	int i;
 
-	i = -1;
-	while (src[++i])
-		dest[i] = src[i];
-	dest[i] = '\0';
-	return (dest);
+	i = 0;
+	result = 1;
+	if (nb > 12 || nb < 0)
+		return (0);
+	while (i < nb)
+	{
+		result += result * i;
+		i++;
+	}
+	return (result);
 }

@@ -6,7 +6,7 @@
 /*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 15:23:19 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/05 17:42:58 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/11 18:20:31 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int					ft_isprint(int c);
 char				*ft_strcat(char *dest, char *src);
 char				*ft_strchr(const char *str, int c);
 int					ft_strcmp(const char *s1, const char *s2);
-char				*ft_strcpy(char *dest, char *src);
+char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strdup(char *src);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
 char				*ft_strncat(char *dest, char *src, int nb);
@@ -65,6 +65,7 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				**ft_split(char *str, char *charset);
+char				**ft_split_char(char *str, char charset);
 char				*ft_strtrim(char const *c);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int nb);
@@ -82,5 +83,9 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+char				*ft_convert_base(char *nbr, char *base_from, char *base_to);
+int					ft_sqrt(int nb);
+int					ft_iterative_power(int nb, int power);
+int					ft_iterative_factorial(int nb);
 
 #endif

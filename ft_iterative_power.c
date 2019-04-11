@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 13:16:12 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/09 16:26:18 by lugibone         ###   ########.fr       */
+/*   Created: 2019/02/10 15:22:32 by lugibone          #+#    #+#             */
+/*   Updated: 2019/02/10 15:54:54 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, const char *src)
+int	ft_iterative_power(int nb, int power)
 {
 	int i;
 
-	i = -1;
-	while (src[++i])
-		dest[i] = src[i];
-	dest[i] = '\0';
-	return (dest);
+	i = nb;
+	if (power < 0)
+		return (0);
+	if (power == 0)
+		return (1);
+	while (power > 1)
+	{
+		nb *= i;
+		power--;
+	}
+	return (nb);
 }

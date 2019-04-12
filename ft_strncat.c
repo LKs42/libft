@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, int nb)
+#include "libft.h"
+
+char	*ft_strncat(char *dest, const char *src, size_t nb)
 {
 	int i;
 	int j;
 
 	j = 0;
 	i = -1;
-	while (dest[++i])
-	{
-	}
+	while (dest[++i]);
 	while (src[j] && nb--)
 	{
 		dest[i] = src[j];

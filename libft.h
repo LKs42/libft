@@ -34,7 +34,7 @@ char				*ft_strcat(char *dest, const char *src);
 char				*ft_strchr(const char *str, int c);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dest, const char *src);
-char				*ft_strdup(gitt char *src);
+char				*ft_strdup(const char *src);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
 char				*ft_strncat(char *dest, const char *src, size_t nb);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);

@@ -6,7 +6,7 @@
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 15:00:09 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/05 17:35:35 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/17 13:57:14 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strstr(const char *str, const char *to_find)
 
 	i = 0;
 	if ((int)ft_strlen(to_find) == 0)
-		return (str);
+		return ((char*)str);
 	while (str[i])
 	{
 		j = 0;
@@ -27,7 +27,7 @@ char	*ft_strstr(const char *str, const char *to_find)
 		{
 			j++;
 			if (to_find[j] == '\0')
-				return (str + i);
+				return ((char*)str + i);
 		}
 		i++;
 	}

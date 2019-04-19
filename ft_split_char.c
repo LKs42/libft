@@ -6,7 +6,7 @@
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 15:43:54 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/08 15:47:57 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/17 15:36:56 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 static int		ft_is_printable(char c, char cs)
 {
-	int i;
-
-	i = -1;
 	if (c == cs)
 		return (2);
 	if (c > ' ' && c < 127)

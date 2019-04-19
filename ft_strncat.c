@@ -6,7 +6,7 @@
 /*   By: lugibone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 13:18:54 by lugibone          #+#    #+#             */
-/*   Updated: 2019/04/02 13:19:00 by lugibone         ###   ########.fr       */
+/*   Updated: 2019/04/17 14:11:01 by lugibone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ char	*ft_strncat(char *dest, const char *src, size_t nb)
 
 	j = 0;
 	i = -1;
-	while (dest[++i]);
+	while (dest[++i])
+	{
+	}
 	while (src[j] && nb--)
 	{
 		dest[i] = src[j];

@@ -6,11 +6,43 @@
 #    By: lugibone <lugibone@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 15:19:01 by lugibone          #+#    #+#              #
-#    Updated: 2019/04/10 16:39:30 by lugibone         ###   ########.fr        #
+#    Updated: 2019/04/17 15:09:50 by lugibone         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
+RESET = \e[0m
+BOLD = \e[1m
+DIM	=	\e[2m
+ITALIC = \e[3m
+UNDERLINE = \e[4m
+BLINK = \e[5m
+REVERSED = \e[7m
+HIDDEN = \e[8m
+DEFAULT = \e[39m
+BLACK = \e[30m
+RED = \e[31m
+GREEN = \e[32m
+YELLOW = \e[33m
+BLUE = \e[34m
+MAGENTA = \e[35m
+CYAN = \e[36m
+LIGHT_GRAY = \e[37m
+DARK_GRAY = \e[90m
+WHITE = \e[97m
+BG_DEFAULT = \e[49m
+BG_BLACK = \e[30m
+BG_RED = \e[41m
+BG_GREEN = \e[42m
+BG_YELLOW = \e[43m
+BG_BLUE = \e[44m
+BG_MAGENTA = \e[45m
+BG_CYAN = \e[46m
+LIGHT_GRAY = \e[47m
+DARK_GRAY = \e[100m
+BG_WHITE = \e[107m
+
 CCC = gcc -c
 FLAGS = -Wall -Werror -Wextra
 SRC_PATH = .
@@ -81,55 +113,25 @@ SRC_NAME = ft_atoi.c\
 	ft_toupper.c
 AR = ar rc
 OBJ_NAME = $(SRC_NAME:.c=.o)
-SRC = $(addprefix $(SRC_PATH)/,$(SRC_NAME))
-OBJ = $(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
-
-# Colors
-RESET = \0m
-BOLD = \e[1m
-DIM	=	\e[2m
-ITALIC = \e[3m
-UNDERLINE = \e[4m
-BLINK = \e[5m
-REVERSED = \e[7m
-HIDDEN = \e[8m
-DEFAULT = \e[39m
-BLACK = \e[30m
-RED = \e[31m
-GREEN = \e[32m
-YELLOW = \e[33m
-BLUE = \e[34m
-MAGENTA = \e[35m
-CYAN = \e[36m
-LIGHT_GRAY = \e[37m
-DARK_GRAY = \e[90m
-WHITE = \e[97m
-BG_DEFAULT = \e[49m
-BG_BLACK = \e[30m
-BG_RED = \e[41m
-BG_GREEN = \e[42m
-BG_YELLOW = \e[43m
-BG_BLUE = \e[44m
-BG_MAGENTA = \e[45m
-BG_CYAN = \e[46m
-LIGHT_GRAY = \e[47m
-DARK_GRAY = \e[100m
-BG_WHITE = \e[107m
 
 INCLUDES = .
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@$(CCC) $(FLAGS) $(SRC) -I $(INCLUDES)
-	@$(AR) $(NAME) $(O_FILES)
+$(NAME): $(OBJ_NAME)
+	@$(CCC) $(FLAGS) $(SRC_NAME) -I $(INCLUDES)
+	@$(AR) $(NAME) $(OBJ_NAME)
 	@ranlib $(NAME)
-$(OBJ_FOLDER)%.o: $(SRCS_FOLDER)%.c
-	@$(CCC) $(FLAGS) $(SRC) -I $(INCLUDES) -c $< -o $@
+	@printf "$(RESET)$(BOLD)$(BG_GREEN)$(WHITE)$(DIM) DONE $(RESET)\n"
+%.o: %.c
+	@$(CC) $(FLAGS) -c $< -o $@
+	@printf "$(RESET)$(BG_GREEN) $(RESET)"
 clean:
-	@rm -f $(OBJ)
+	@rm -f $(OBJ_NAME)
+	@printf "$(RESET)$(BG_CYAN)$(WHITE) O_FILES CLEANED $(RESET)\n"
 fclean: clean
 	@rm -f $(NAME)
+	@printf "$(RESET)$(BG_CYAN)$(WHITE) LIBFT.A CLEANED $(RESET) \n"
 re: fclean all
 
 .PHONY: clean fclean re
